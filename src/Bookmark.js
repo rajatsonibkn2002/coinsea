@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
-import TableComponent from "./TableComponent";
 import CircularProgress from '@mui/material/CircularProgress'
+import TableBookmark from "./TableBookmark";
 
-export default function App(){
-  // const [haveMetamask, sethaveMetamask] = useState(true);
+export default function Bookmark(){
+    // const [haveMetamask, sethaveMetamask] = useState(true);
   const [isConnected, setisConnected] = useState(false);
   const [currencyData, setcurrencyData] = useState([]);
   const [hasLoaded, sethasLoaded] = useState(false);
@@ -13,15 +13,14 @@ export default function App(){
   const connectWallet = async () => {
   try {
       if (!ethereum) {
-      // sethaveMetamask(false);
-      alert("Install Metamask!");
+        alert("Install Metamask!");
+    //   sethaveMetamask(false);
       }
-      // const accounts = await ethereum.request({
-      // method: 'eth_requestAccounts',
-      // });
+    //   const accounts = await ethereum.request({
+    //     method: 'eth_requestAccounts',
+    //   });
       setisConnected(true);
   } catch (error) {
-      alert("Install Metamask!");
       setisConnected(false);
   }
   };
@@ -61,7 +60,7 @@ export default function App(){
     hasLoaded ?
     <div className="app-div">
     {
-      isConnected ? <TableComponent props={currencyData} /> : <div><nav className='navbar'>
+      isConnected ? <TableBookmark props={currencyData} /> : <div><nav className='navbar'>
       <h1 className='nav-brand'><a href='/'>CoinSea</a></h1></nav><div className="connect-wallet-div"><Button className="connect-wallet-btn" variant="outlined" onClick={connectWallet}>Connect Wallet</Button></div></div>
     }</div> : <div className="circular-div"><CircularProgress /></div>
   )

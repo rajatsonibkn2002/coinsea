@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,108 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: url("background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.circular-div{
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+body, #root, .connect-wallet-div, .app-div{
+  height: 100%;
+}
+
+.connect-wallet-div{
+  height: 80vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container{
+  background: transparent !important;
+}
+
+.navbar{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px 60px 0 60px;
+
+  margin-bottom: 50px;
+}
+
+.currency-dropdown{
+  width: 100px;
+}
+
+.currency-search{
+  width: 450px;
+}
+
+.coin-name{
+  text-transform: capitalize;
+}
+
+.column-heading{
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+.nav-brand{
+  margin: 0;
+  padding: 0;
+  font-family: "Silkscreen";
+  font-size: 32px;
+}
+
+.nav-right{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 250px;
+}
+
+.bookmark-btn{
+  border-color: grey !important;
+}
+.bookmark-btn:hover{
+  border-color: black !important;
+}
+
+.bookmark-btn a{
+  text-decoration: none;
+  text-transform: none;
+  color: black !important;
+}
+
+.nav-brand a{
+  text-decoration: none;
+  color: black;
+}
+
+.connect-wallet-btn{
+  border-color: grey !important;
+  color: black !important;
+
+  font-size: 24px !important;
+}
+
+.connect-wallet-btn:hover{
+  border-color: black !important;
 }
