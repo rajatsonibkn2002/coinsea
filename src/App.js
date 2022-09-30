@@ -4,7 +4,7 @@ import TableComponent from "./TableComponent";
 import CircularProgress from '@mui/material/CircularProgress'
 
 export default function App(){
-  // const [haveMetamask, sethaveMetamask] = useState(true);
+  const [haveMetamask, sethaveMetamask] = useState(true);
   const [isConnected, setisConnected] = useState(false);
   const [currencyData, setcurrencyData] = useState([]);
   const [hasLoaded, sethasLoaded] = useState(false);
@@ -13,12 +13,12 @@ export default function App(){
   const connectWallet = async () => {
   try {
       if (!ethereum) {
-      // sethaveMetamask(false);
+      sethaveMetamask(false);
       alert("Install Metamask!");
       }
-      // const accounts = await ethereum.request({
-      // method: 'eth_requestAccounts',
-      // });
+      const accounts = await ethereum.request({
+      method: 'eth_requestAccounts',
+      });
       setisConnected(true);
   } catch (error) {
       alert("Install Metamask!");

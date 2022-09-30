@@ -4,7 +4,7 @@ import CircularProgress from '@mui/material/CircularProgress'
 import TableBookmark from "./TableBookmark";
 
 export default function Bookmark(){
-    // const [haveMetamask, sethaveMetamask] = useState(true);
+  const [haveMetamask, sethaveMetamask] = useState(true);
   const [isConnected, setisConnected] = useState(false);
   const [currencyData, setcurrencyData] = useState([]);
   const [hasLoaded, sethasLoaded] = useState(false);
@@ -14,11 +14,11 @@ export default function Bookmark(){
   try {
       if (!ethereum) {
         alert("Install Metamask!");
-    //   sethaveMetamask(false);
+        sethaveMetamask(false);
       }
-    //   const accounts = await ethereum.request({
-    //     method: 'eth_requestAccounts',
-    //   });
+      const accounts = await ethereum.request({
+        method: 'eth_requestAccounts',
+      });
       setisConnected(true);
   } catch (error) {
       setisConnected(false);
