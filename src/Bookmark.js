@@ -11,19 +11,20 @@ export default function Bookmark(){
   const { ethereum } = window;
 
   const connectWallet = async () => {
-  try {
-      if (!ethereum) {
-        alert("Install Metamask!");
+    try {
+        if (!ethereum) {
         sethaveMetamask(false);
-      }
-      const accounts = await ethereum.request({
+        alert("Install Metamask!");
+        }
+        const accounts = await ethereum.request({
         method: 'eth_requestAccounts',
-      });
-      setisConnected(true);
-  } catch (error) {
-      setisConnected(false);
-  }
-  };
+        });
+        setisConnected(true);
+    } catch (error) {
+        alert("Error while connecting!");
+        setisConnected(false);
+    }
+    };
 
   let propsData = [];
   async function fetchData(){

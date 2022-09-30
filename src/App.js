@@ -21,7 +21,7 @@ export default function App(){
       });
       setisConnected(true);
   } catch (error) {
-      alert("Install Metamask!");
+      alert("Error while connecting!");
       setisConnected(false);
   }
   };
